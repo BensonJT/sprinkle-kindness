@@ -8,6 +8,7 @@ img/*.heic
 img/*.HEIC
 img/*.png
 img/*.PNG
+img/*.afphoto
 
 # Claude Code local settings (personal permissions, not shared)
 .claude/settings.local.json
