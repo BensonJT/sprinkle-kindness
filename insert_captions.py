@@ -49,7 +49,7 @@ def main():
         r'alt=\\"Decorated sugar cookies by Sprinkle Kindness\\" )'
         r'(?:data-tag=\\"(?P<existing_tag>.*?)\\" )?'
         r'(?P<mid>style=\\".*?\\">\\n\s*<figcaption class=\\"ck-cap\\" '
-        r'contenteditable=\\"true\\" data-ph=\\"Add a caption…\\" '
+        r'data-ph=\\"Add a caption…\\" '
         r'style=\\".*?\\">)(?P<existing_cap>.*?)(?P<close><\\u002Ffigcaption>)'
     )
 
