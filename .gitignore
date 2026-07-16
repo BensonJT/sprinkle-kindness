@@ -1,0 +1,17 @@
+# Raw source photos (large; may contain GPS/EXIF metadata) — only the
+# converted, stripped copies in img/webp/ are needed by the site.
+img/*.jpg
+img/*.JPG
+img/*.jpeg
+img/*.JPEG
+img/*.heic
+img/*.HEIC
+img/*.png
+img/*.PNG
+
+# Claude Code local settings (personal permissions, not shared)
+.claude/settings.local.json
+
+# OS junk
+.DS_Store
+Thumbs.db

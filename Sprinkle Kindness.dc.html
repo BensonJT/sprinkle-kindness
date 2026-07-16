@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #fdf6f4; color: #4a3d3d; font-family: 'Nunito Sans', sans-serif; }
+  a { color: #b56a7a; text-decoration: none; }
+  a:hover { opacity: 0.72; }
+  .ck-cap:empty::before { content: attr(data-ph); color: #c8adb1; font-style: italic; }
+  ::selection { background: #f4cdd6; }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden;">
+
+  <!-- ===== top bar ===== -->
+  <header style="position:sticky; top:0; z-index:20; background:rgba(253,246,244,0.86); backdrop-filter:blur(10px); border-bottom:1px solid #f0dde1;">
+    <div style="max-width:1160px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; gap:20px;">
+      <a href="#top" style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:24px; color:#4a3d3d; letter-spacing:0.01em;">Sprinkle Kindness</a>
+      <nav style="display:flex; gap:28px; align-items:center; font-size:14px; font-weight:600;">
+        <a href="#about" style="color:#6b5959;">About</a>
+        <a href="#gallery" style="color:#6b5959;">Gallery</a>
+        <a href="#offer" style="color:#6b5959;">What I Make</a>
+        <a href="https://www.instagram.com/_sprinkle_kindness" style="background:#e8b7c2; color:#5a3540; padding:9px 18px; border-radius:999px;">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== hero ===== -->
+  <section id="top" style="background:linear-gradient(180deg,#fbe9ec 0%, #fdf6f4 100%); padding:88px 32px 76px;">
+    <div style="max-width:820px; margin:0 auto; text-align:center;">
+      <div style="font-size:12px; letter-spacing:0.38em; color:#c98a98; font-weight:700; margin-bottom:24px;">HANDMADE DECORATED SUGAR COOKIES</div>
+      <h1 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:76px; line-height:0.98; margin:0; color:#4a3d3d;">Sprinkle Kindness</h1>
+      <div style="width:64px; height:2px; background:#e0a7b3; margin:30px auto;"></div>
+      <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:26px; line-height:1.5; margin:0 auto; max-width:560px; color:#7a6b6b;">Follow along on my baking journey as I sprinkle a little love and kindness into every cookie I create.</p>
+      <div style="margin-top:36px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a href="#gallery" style="background:#4a3d3d; color:#fdf6f4; font-weight:600; font-size:15px; padding:14px 30px; border-radius:999px;">See my cookies</a>
+        <a href="#about" style="background:#fff; color:#7a5560; font-weight:600; font-size:15px; padding:14px 30px; border-radius:999px; border:1px solid #f0dde1;">Meet the baker</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== about ===== -->
+  <section id="about" style="padding:84px 32px; background:#fdf6f4;">
+    <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:center;">
+      <div style="position:relative;">
+        <image-slot id="ck-portrait" shape="rounded" radius="20" placeholder="A pretty photo of you 🎀" style="width:100%; aspect-ratio:4/5; box-shadow:0 24px 50px -24px rgba(120,70,80,0.45);"></image-slot>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.3em; color:#c98a98; font-weight:700; margin-bottom:18px;">A LITTLE ABOUT ME</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:42px; line-height:1.1; margin:0 0 22px; color:#4a3d3d;">Hi, I'm so glad you're here!</h2>
+        <p style="font-size:17px; line-height:1.8; margin:0 0 18px; color:#5a4d4d;">I'm 21 and I absolutely love people — baking is simply how I get to share a little joy. I hand-decorate sugar cookies for the moments that matter most, and I pour just as much care into how they taste as how they look.</p>
+        <p style="font-size:17px; line-height:1.8; margin:0 0 18px; color:#5a4d4d;">So many sugar cookies are far too sweet. Mine are made to be <em style="color:#b56a7a; font-style:normal; font-weight:700;">just right</em> — beautiful to look at, and a genuine delight to eat.</p>
+        <p style="font-size:17px; line-height:1.8; margin:0; color:#5a4d4d;">Someday, Lord willing, I dream of opening a bakery of my own. Until then, thank you for following along and letting me sprinkle a little kindness your way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== gallery ===== -->
+  <section id="gallery" style="padding:84px 32px; background:#fbe9ec;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:12px;">
+        <div style="font-size:12px; letter-spacing:0.3em; color:#c98a98; font-weight:700; margin-bottom:14px;">THE COOKIE GALLERY</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:46px; line-height:1.05; margin:0; color:#4a3d3d;">A little of everything I've made</h2>
+        <p style="font-size:16px; color:#8a7676; margin:16px auto 0; max-width:520px; line-height:1.6;">Drop a photo into any tile, then add a caption underneath to share the story behind it.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:32px 26px; margin-top:52px;">
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-01" shape="rounded" radius="16" placeholder="Photo 1" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-02" shape="rounded" radius="16" placeholder="Photo 2" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-03" shape="rounded" radius="16" placeholder="Photo 3" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-04" shape="rounded" radius="16" placeholder="Photo 4" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-05" shape="rounded" radius="16" placeholder="Photo 5" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-06" shape="rounded" radius="16" placeholder="Photo 6" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-07" shape="rounded" radius="16" placeholder="Photo 7" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-08" shape="rounded" radius="16" placeholder="Photo 8" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-09" shape="rounded" radius="16" placeholder="Photo 9" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-10" shape="rounded" radius="16" placeholder="Photo 10" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-11" shape="rounded" radius="16" placeholder="Photo 11" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-12" shape="rounded" radius="16" placeholder="Photo 12" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-13" shape="rounded" radius="16" placeholder="Photo 13" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-14" shape="rounded" radius="16" placeholder="Photo 14" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-15" shape="rounded" radius="16" placeholder="Photo 15" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-16" shape="rounded" radius="16" placeholder="Photo 16" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-17" shape="rounded" radius="16" placeholder="Photo 17" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-18" shape="rounded" radius="16" placeholder="Photo 18" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-19" shape="rounded" radius="16" placeholder="Photo 19" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-20" shape="rounded" radius="16" placeholder="Photo 20" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-21" shape="rounded" radius="16" placeholder="Photo 21" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-22" shape="rounded" radius="16" placeholder="Photo 22" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-23" shape="rounded" radius="16" placeholder="Photo 23" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-24" shape="rounded" radius="16" placeholder="Photo 24" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-25" shape="rounded" radius="16" placeholder="Photo 25" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-26" shape="rounded" radius="16" placeholder="Photo 26" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-27" shape="rounded" radius="16" placeholder="Photo 27" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-28" shape="rounded" radius="16" placeholder="Photo 28" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-29" shape="rounded" radius="16" placeholder="Photo 29" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-30" shape="rounded" radius="16" placeholder="Photo 30" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-31" shape="rounded" radius="16" placeholder="Photo 31" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-32" shape="rounded" radius="16" placeholder="Photo 32" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-33" shape="rounded" radius="16" placeholder="Photo 33" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-34" shape="rounded" radius="16" placeholder="Photo 34" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-35" shape="rounded" radius="16" placeholder="Photo 35" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-36" shape="rounded" radius="16" placeholder="Photo 36" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-37" shape="rounded" radius="16" placeholder="Photo 37" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-38" shape="rounded" radius="16" placeholder="Photo 38" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-39" shape="rounded" radius="16" placeholder="Photo 39" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-40" shape="rounded" radius="16" placeholder="Photo 40" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-41" shape="rounded" radius="16" placeholder="Photo 41" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-42" shape="rounded" radius="16" placeholder="Photo 42" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-43" shape="rounded" radius="16" placeholder="Photo 43" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-44" shape="rounded" radius="16" placeholder="Photo 44" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-45" shape="rounded" radius="16" placeholder="Photo 45" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-46" shape="rounded" radius="16" placeholder="Photo 46" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-47" shape="rounded" radius="16" placeholder="Photo 47" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-48" shape="rounded" radius="16" placeholder="Photo 48" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-49" shape="rounded" radius="16" placeholder="Photo 49" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-50" shape="rounded" radius="16" placeholder="Photo 50" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-51" shape="rounded" radius="16" placeholder="Photo 51" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-52" shape="rounded" radius="16" placeholder="Photo 52" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-53" shape="rounded" radius="16" placeholder="Photo 53" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-54" shape="rounded" radius="16" placeholder="Photo 54" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-55" shape="rounded" radius="16" placeholder="Photo 55" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-56" shape="rounded" radius="16" placeholder="Photo 56" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-57" shape="rounded" radius="16" placeholder="Photo 57" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-58" shape="rounded" radius="16" placeholder="Photo 58" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-59" shape="rounded" radius="16" placeholder="Photo 59" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-60" shape="rounded" radius="16" placeholder="Photo 60" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-61" shape="rounded" radius="16" placeholder="Photo 61" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-62" shape="rounded" radius="16" placeholder="Photo 62" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-63" shape="rounded" radius="16" placeholder="Photo 63" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-64" shape="rounded" radius="16" placeholder="Photo 64" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-65" shape="rounded" radius="16" placeholder="Photo 65" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <image-slot id="ck-66" shape="rounded" radius="16" placeholder="Photo 66" style="width:100%; aspect-ratio:1; box-shadow:0 12px 30px -20px rgba(120,70,80,0.45);"></image-slot>
+          <figcaption class="ck-cap" contenteditable="true" data-ph="Add a caption…" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.4; color:#7a6b6b; text-align:center; outline:none; min-height:1.4em; padding:0 6px;"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== what I make ===== -->
+  <section id="offer" style="padding:84px 32px; background:#fdf6f4;">
+    <div style="max-width:1000px; margin:0 auto; text-align:center;">
+      <div style="font-size:12px; letter-spacing:0.3em; color:#c98a98; font-weight:700; margin-bottom:14px;">WHAT I MAKE</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:46px; line-height:1.05; margin:0 0 14px; color:#4a3d3d;">Made for your special days</h2>
+      <p style="font-size:16px; color:#8a7676; margin:0 auto 44px; max-width:520px; line-height:1.6;">Custom decorated sugar cookie sets, thoughtfully designed for every celebration.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; text-align:left;">
+        <div style="background:#fff; border-radius:18px; padding:28px; box-shadow:0 14px 34px -22px rgba(120,70,80,0.4);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#b56a7a; margin-bottom:8px;">Weddings &amp; Bridal Showers</div>
+          <p style="font-size:15px; line-height:1.65; margin:0; color:#6b5959;">Elegant sets to match your florals, colors, and theme for the big day.</p>
+        </div>
+        <div style="background:#fff; border-radius:18px; padding:28px; box-shadow:0 14px 34px -22px rgba(120,70,80,0.4);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#b56a7a; margin-bottom:8px;">Birthdays &amp; Anniversaries</div>
+          <p style="font-size:15px; line-height:1.65; margin:0; color:#6b5959;">Playful, personal cookies to make another year feel extra special.</p>
+        </div>
+        <div style="background:#fff; border-radius:18px; padding:28px; box-shadow:0 14px 34px -22px rgba(120,70,80,0.4);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#b56a7a; margin-bottom:8px;">Graduations</div>
+          <p style="font-size:15px; line-height:1.65; margin:0; color:#6b5959;">Celebrate the milestone with cookies in their school colors and spirit.</p>
+        </div>
+        <div style="background:#fff; border-radius:18px; padding:28px; box-shadow:0 14px 34px -22px rgba(120,70,80,0.4);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#b56a7a; margin-bottom:8px;">Holidays &amp; Occasions</div>
+          <p style="font-size:15px; line-height:1.65; margin:0; color:#6b5959;">Seasonal favorites and one-of-a-kind sets for whatever you're celebrating.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== footer ===== -->
+  <footer style="padding:76px 32px 84px; background:#4a3d3d; text-align:center;">
+    <div style="font-size:12px; letter-spacing:0.32em; color:#e8b7c2; font-weight:700; margin-bottom:18px;">LET'S MAKE SOMETHING SWEET</div>
+    <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:#fdf6f4; line-height:1.1; margin-bottom:10px;">Sprinkle Kindness</div>
+    <p style="color:#c9b6b6; font-size:16px; max-width:440px; margin:0 auto 26px; line-height:1.6;">Reach out on Instagram to chat about your next celebration — I'd love to bake for you.</p>
+    <a href="https://www.instagram.com/_sprinkle_kindness" style="display:inline-block; color:#e8b7c2; font-size:17px; font-weight:700; border-bottom:2px solid #e8b7c2; padding-bottom:3px;">@_sprinkle_kindness</a>
+    <div style="margin-top:40px; color:#8a7676; font-size:13px;">Baked with love · Sprinkle Kindness</div>
+  </footer>
+
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#fbe9ec"/>
+      <circle cx="50" cy="50" r="26" fill="#e8b7c2"/>
+      <text x="50" y="59" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#4a3d3d">SK</text>
+    </svg>
+  </template>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
