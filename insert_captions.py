@@ -29,7 +29,7 @@ def escape(s):
 
 def main():
     rows = {}
-    with open(CSV_PATH, newline="", encoding="utf-8") as f:
+    with open(CSV_PATH, newline="", encoding="utf-8-sig") as f:
         reader = csv.reader(f)
         next(reader)  # header
         for row in reader:
