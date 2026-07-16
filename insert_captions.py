@@ -5,9 +5,8 @@ Usage: python3 insert_captions.py
 
 Reads captions.csv (columns: filename, caption, tag). For each gallery photo
 in index.html whose filename has a non-empty caption/tag in the CSV, fills
-in its (currently empty, contenteditable) figcaption and/or stamps a
-data-tag="..." attribute onto its <img> (for a future category-filter
-feature -- birthdays, weddings, holidays, etc.).
+in its figcaption text and/or stamps a data-tag="..." attribute onto its
+<img> (used by the category-filter buttons above the gallery).
 
 Blank cells in the CSV are left alone (existing caption/tag, if any, is kept
 as-is), so you can fill in captions.csv incrementally and re-run this
@@ -20,10 +19,14 @@ INDEX = "index.html"
 CSV_PATH = "captions.csv"
 
 
-def escape(s):
+def escape_attr(s):
+    s = s.replace("&", "&amp;").replace('"', "&quot;")
+    s = s.replace("<", "&lt;").replace(">", "&gt;")
+    return s
+
+
+def escape_text(s):
     s = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    s = s.replace("\\", "\\\\").replace('"', '\\"')
-    s = s.replace("\r", "").replace("\n", "\\n")
     return s
 
 
@@ -45,19 +48,20 @@ def main():
         content = f.read()
 
     pattern = re.compile(
-        r'(?P<prefix><img src=\\"img/webp/(?P<fn>[A-Za-z0-9_]+\.webp)\\" '
-        r'alt=\\"Decorated sugar cookies by Sprinkle Kindness\\" )'
-        r'(?:data-tag=\\"(?P<existing_tag>.*?)\\" )?'
-        r'(?P<mid>style=\\".*?\\">\\n\s*<figcaption class=\\"ck-cap\\" '
-        r'data-ph=\\"Add a caption…\\" '
-        r'style=\\".*?\\">)(?P<existing_cap>.*?)(?P<close><\\u002Ffigcaption>)'
+        r'(?P<prefix><img src="img/webp/(?P<fn>[A-Za-z0-9_]+\.webp)" '
+        r'alt="Decorated sugar cookies by Sprinkle Kindness" )'
+        r'(?:data-tag="(?P<existing_tag>.*?)" )?'
+        r'(?P<mid>style="[^"]*">\s*<figcaption class="ck-cap" '
+        r'data-ph="Add a caption…" '
+        r'style="[^"]*">)(?P<existing_cap>.*?)(?P<close></figcaption>)',
+        re.DOTALL,
     )
 
-    caps_updated = tags_updated = unknown_count = 0
+    caps_updated = tags_updated = 0
     unknown = []
 
     def replace(m):
-        nonlocal caps_updated, tags_updated, unknown_count
+        nonlocal caps_updated, tags_updated
         fn = m.group("fn")
         entry = rows.get(fn)
         if entry is None:
@@ -68,11 +72,11 @@ def main():
         final_tag = tag or m.group("existing_tag") or ""
         if tag:
             tags_updated += 1
-        tag_attr = f'data-tag=\\"{escape(final_tag)}\\" ' if final_tag else ""
+        tag_attr = f'data-tag="{escape_attr(final_tag)}" ' if final_tag else ""
 
         if cap:
             caps_updated += 1
-            final_cap = escape(cap)
+            final_cap = escape_text(cap)
         else:
             final_cap = m.group("existing_cap")
 
