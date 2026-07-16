@@ -7,7 +7,7 @@ Instagram footer.
 
 ## What's in this folder
 
-- **`sprinkle-kindness.html`** — the complete, self-contained website. Open it in any
+- **`index.html`** — the complete, self-contained website. Open it in any
   browser; everything (styles, fonts, code) is inlined into this one file. This is the
   file to deploy.
 - **`Sprinkle Kindness.dc.html`** + **`image-slot.js`** — the original editable source
